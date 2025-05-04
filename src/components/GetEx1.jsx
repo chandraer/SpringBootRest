@@ -2,7 +2,7 @@ import axios from "axios";
 import {useEffect,useState} from "react";
 const GetEx1=()=>{
     const [arr,setArr]=useState([]);
-    const get_func=async()=>{
+    const get_function=async()=>{
         const response=await axios.get("https://www.w3schools.com/angular/customers.php");
         console.log(response);
         const {data}=response;
@@ -12,7 +12,7 @@ const GetEx1=()=>{
         setArr(records);
     }
     useEffect(()=>{
-        get_func();
+        get_function();
     },[]);
     return(
         <>
